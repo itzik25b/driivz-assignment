@@ -1,0 +1,4 @@
+<div id="iss-map-wrapper" *ngIf="apiLoaded | async">
+  <google-map [center]="center" [zoom]="zoom" width="null" height="null"></google-map>
+  <button id="iss-map-add-bookmark" (click)="addBookmark()">+</button>
+</div>

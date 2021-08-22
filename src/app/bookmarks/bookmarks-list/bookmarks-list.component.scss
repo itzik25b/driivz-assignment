@@ -1,0 +1,27 @@
+#bookmarks-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  #bookmarks-list-items-wrapper {
+    overflow: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    height: 0;
+
+    .bookmarks-list-item-wrapper {
+      position: relative;
+      padding: 20px;
+
+      &.selected {
+        background: green;
+      }
+
+      .list-remove-button {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

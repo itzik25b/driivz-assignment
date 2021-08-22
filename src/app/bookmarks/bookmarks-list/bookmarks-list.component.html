@@ -1,0 +1,13 @@
+<div id="bookmarks-list-wrapper">
+  <input type="text" #searchInput>
+  <div id="bookmarks-list-items-wrapper">
+    <div class="bookmarks-list-item-wrapper" [ngClass]="{'selected': selectedBookmarkId === bookmark.id}"
+         *ngFor="let bookmark of bookmarks$ | async" (click)="toggleSelectedItem(bookmark)">
+      <button class="list-remove-button" (click)="removeItem(bookmark)">X</button>
+      <div>{{bookmark.id}}</div>
+      <div>lat: {{bookmark.position.latitude}}</div>
+      <div>lon: {{bookmark.position.longitude}}</div>
+      <div>date: {{bookmark.date}}</div>
+    </div>
+  </div>
+</div>

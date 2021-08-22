@@ -1,0 +1,10 @@
+  <table>
+    <tr class="bookmarks-list-item-wrapper" *ngFor="let bookmark of bookmarks$ | async">
+      <td>id: {{ bookmark.id }}</td>
+      <td>date: {{ bookmark.date }}</td>
+      <td>
+        <div>lat: {{bookmark.position.latitude}}</div>
+        <div>lon: {{bookmark.position.longitude}}</div>
+      </td>
+    </tr>
+  </table>

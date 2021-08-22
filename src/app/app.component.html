@@ -1,0 +1,31 @@
+<div id="iss-tracker-wrapper">
+  <div id="iss-tracker-left-side-panel">
+    <div id="iss-tracker-left-side-panel-title">ISS Tracker</div>
+    <div id="iss-tracker-left-side-panel-list-wrapper">
+      <span id="iss-tracker-left-side-panel-list-title">Saved locations</span>
+      <app-bookmarks-list></app-bookmarks-list>
+    </div>
+  </div>
+
+
+  <div id="iss-tracker-main-content">
+
+    <div id="iss-tracker-main-content-title-wrapper">
+      <div id="iss-tracker-main-content-title">Current location</div>
+      <div id="iss-tracker-main-content-info">
+        <div id="iss-tracker-main-content-info-lat-lon">Lat: {{latitude}}, Lon: {{longitude}}</div>
+        <div id="iss-tracker-main-content-info-lat-timestamp">Time: {{lastUpdate}}</div>
+      </div>
+    </div>
+
+    <div id="iss-tracker-main-content-tabs-wrapper">
+      <button routerLink="/iss-map" routerLinkActive="active">Map</button>
+      <button routerLink="/reports" routerLinkActive="active">Report</button>
+      <div id="iss-tracker-main-content-data-wrapper">
+<!--        <app-iss-map></app-iss-map>-->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  </div>
+</div>
